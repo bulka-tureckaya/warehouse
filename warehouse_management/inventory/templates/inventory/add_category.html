@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить категорию</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Добавить новую категорию</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    {{ category_form.as_p }}
+    
+    <button type="submit">Добавить категорию</button>
+</form>
+
+<a href="{% url 'item_list' %}">На список товаров</a>
+<a href="{% url 'home' %}">На главную страницу</a>
+
+</body>
+</html>

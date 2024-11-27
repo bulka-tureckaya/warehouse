@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+<form method="post">
+    {% csrf_token %}
+    
+    {{ item_form.as_p }}
+    
+    <label for="shelf">Стелажи по приоритетности:</label>
+        {% for shelf in shelves %}
+            <p value="{{ shelf.id }}">{{ shelf.name }} (Текущая вместимость: {{ shelf.capacity }})</p>
+        {% endfor %}
+
+    <button type="submit">Добавить товар</button>
+</form>
+
+{% if error %}
+<div style="color: red;">{{ error }}</div>  <!-- Отображение ошибки -->
+{% endif %}
+
+<a href="{% url 'home' %}">На главную страницу</a>

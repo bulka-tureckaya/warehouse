@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выдать товар</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Выдать товар со склада</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    
+    <button type="submit">Выдать товар</button>
+</form>
+
+{% if error %}
+<div style="color: red;">{{ error }}</div>
+{% endif %}
+
+<a href="{% url 'home' %}">На главную страницу</a>
+
+</body>
+</html>

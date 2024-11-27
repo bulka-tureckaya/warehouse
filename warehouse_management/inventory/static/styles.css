@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+/* Контейнер для контента */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+/* Параграфы */
+p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Ссылки */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Центрирование контента */
+.centered {
+    text-align: center;
+}
+
+
+
+
+/* Увеличение отступов между строками */
+p, h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+/* Стили для форм ввода */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для формы */
+form {
+    margin-bottom: 20px;
+}
+
+/* Стили для ссылок */
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 10px 0;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Стили для списков */
+ul, ol {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding-left: 20px; /* Добавляем отступ слева */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+ul li, ol li {
+    position: relative; /* Для позиционирования маркеров */
+}
+
+ul li::before, ol li::before {
+    content: "•"; /* Добавляем маркеры */
+    color: #007bff; /* Цвет маркеров */
+    font-weight: bold; /* Жирный шрифт для маркеров */
+    display: inline-block; /* Встроенный блок */
+    width: 1em; /* Ширина маркеров */
+    margin-left: -1.5em; /* Сдвигаем маркеры влево */
+}

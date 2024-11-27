@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список стеллажей</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Стеллажи</h1>
+<ul>
+    {% for shelf in shelves %}
+        <li>{{ shelf.name }}: Вместимость {{ shelf.capacity }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'item_list' %}">Список товаров</a>
+<a href="{% url 'category_list' %}">Список категорий</a>
+<a href="{% url 'search_items' %}">Поиск товара</a>
+<a href="{% url 'home' %}">На главную страницу</a>
+</body>
+</html>

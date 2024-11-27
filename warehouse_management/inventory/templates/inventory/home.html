@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Добро пожаловать на склад!</h1>
+<ul>
+    <li><a href="{% url 'item_list' %}">Список товаров</a></li>
+    <li><a href="{% url 'category_list' %}">Список категорий</a></li>
+    <li><a href="{% url 'shelf_list' %}">Список стеллажей</a></li>
+    <li><a href="{% url 'search_items' %}">Поиск товара</a></li>
+    <li><a href="{% url 'journal_list' %}">Журнал</a></li>
+    <li><a href="{% url 'add_item' %}">Добавить товар</a></li>
+    <li><a href="{% url 'add_category' %}">Добавить категорию</a></li>
+    <li><a href="{% url 'manage_shelves' %}">Добавить или удалить стелаж</a></li>
+    <li><a href="{% url 'withdraw_item' %}">Выдать товар</a></li>
+    <li><a href="{% url 'account' %}">Личный кабинет</a></li>
+</ul>
+</body>
+</html>

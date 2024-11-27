@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление стеллажами</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Управление стеллажами</h1>
+
+<form method="post">
+    {% csrf_token %}
+    
+    {{ shelf_form.as_p }}  <!-- Поля формы будут автоматически включать выбор размера -->
+    
+    <button type="submit">Добавить стеллаж</button>
+</form>
+
+<h2>Существующие стеллажи</h2>
+<ul>
+{% for shelf in shelves %}
+    <li>
+        {{ shelf.name }} (Текущая: {{ shelf.capacity }}, Максимальная: {{ shelf.max_capacity }}, Размер: {{ shelf.size_limit }}) 
+        <a href="{% url 'delete_shelf' shelf.id %}">Удалить</a>
+    </li>
+{% empty %}
+    <li>Нет стеллажей.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">На главную страницу</a>
+
+</body>
+</html>

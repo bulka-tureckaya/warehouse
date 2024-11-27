@@ -1,0 +1,64 @@
+[
+    {
+        "model": "inventory.category",
+        "pk": 1,
+        "fields": {
+            "name": "Электроника",
+            "description": "Все виды электроники"
+        }
+    },
+    {
+        "model": "inventory.category",
+        "pk": 2,
+        "fields": {
+            "name": "Одежда",
+            "description": "Различные виды одежды"
+        }
+    },
+    {
+        "model": "inventory.shelf",
+        "pk": 1,
+        "fields": {
+            "name": "Стеллаж 1",
+            "description": "Стеллаж для электроники",
+            "capacity": 100,
+            "max_capacity": 200,
+            "size_limit": "medium"
+        }
+    },
+    {
+        "model": "inventory.shelf",
+        "pk": 2,
+        "fields": {
+            "name": "Стеллаж 2",
+            "description": "Стеллаж для одежды",
+            "capacity": 50,
+            "max_capacity": 150,
+            "size_limit": "large"
+        }
+    },
+    {
+        "model": "inventory.item",
+        "pk": 1,
+        "fields": {
+            "name": "Смартфон",
+            "description": "Современный смартфон",
+            "quantity": 10,
+            "size": "small",
+            "category": 1, 
+            "shelf": 1 
+        }
+    },
+    {
+        "model": "inventory.item",
+        "pk": 2,
+        "fields": {
+            "name": "Футболка",
+            "description": "Классическая футболка",
+            "quantity": 20,
+            "size": "medium",
+            "category": 2,
+            "shelf": 2  
+        }
+    }
+]

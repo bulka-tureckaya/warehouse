@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список категорий</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Категории</h1>
+<ul>
+    {% for category in categories %}
+        <li>{{ category.name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'item_list' %}">Список товаров</a>
+<a href="{% url 'shelf_list' %}">Список стеллажей</a>
+<a href="{% url 'search_items' %}">Поиск товара</a>
+<a href="{% url 'home' %}">На главную страницу</a>
+</body>
+</html>

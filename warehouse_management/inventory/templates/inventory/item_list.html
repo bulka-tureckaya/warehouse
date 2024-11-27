@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список товаров</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+<h1>Список товаров</h1>
+<ul>
+    {% for item in items %}
+        <li>{{ item.name }}: {{ item.quantity }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'search_items' %}">Поиск товара</a>
+<a href="{% url 'home' %}">На главную страницу</a>
+</body>
+</html>

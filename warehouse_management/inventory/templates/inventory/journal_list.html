@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Журнал</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+    <h1>Журнал</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Дата и время</th>
+                <th>Название товара</th>
+                <th>Количество товара</th>
+                <th>Вид операции</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in entries %}
+                <tr>
+                    <td>{{ entry.timestamp }}</td>
+                    <td>{{ entry.item_name }}</td>
+                    <td>{{ entry.quantity }}</td>
+                    <td>{{ entry.operation_type }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'home' %}">На главную страницу</a>
+</body>
+</html>
